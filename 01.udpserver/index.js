@@ -26,7 +26,7 @@ if (isMainThread) {
     server.bind(server_port, server_ip);
 
 } else {
-    //assert.strictEqual(workerData.num, 42);
+
     parentPort.on('message', (msg) => {
         console.log('We got a message from the main thread: ', msg);
     });
